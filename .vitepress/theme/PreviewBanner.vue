@@ -5,15 +5,25 @@ const prNumber = import.meta.env.VITE_DOCS_PREVIEW_PR
 
 <template>
   <div v-if="isPreview" class="preview-banner">
-    ⚠ <a :href="`https://github.com/dmocnik/test-docs/pull/${ prNumber }`">PR #{{ prNumber }}</a> Preview — This is not the production documentation
+    ⚠ You are currently viewing a preview of the site from <a target="_blank" :href="`https://github.com/dmocnik/test-docs/pull/${ prNumber }`">PR #{{ prNumber }}↗</a>.
   </div>
 </template>
 
 <style scoped>
+a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    color: var(--vp-c-brand-1)
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
 .preview-banner {
   position: fixed;
   left: 50%;
-  bottom: 20px;
+  top: 69px;
   transform: translateX(-50%);
 
   z-index: 100;
@@ -22,7 +32,7 @@ const prNumber = import.meta.env.VITE_DOCS_PREVIEW_PR
   border-radius: 8px;
 
   background: var(--vp-c-warning-soft);
-  border: 1px solid var(--vp-c-warning-1);
+  border: 2px solid var(--vp-c-warning-1);
   color: var(--vp-c-warning-1);
 
   font-size: 14px;
