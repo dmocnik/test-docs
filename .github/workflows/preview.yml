@@ -29,8 +29,7 @@ jobs:
               if: github.event.action != 'closed' # We don't need the build if we know the preview will be removed
               run: |
                   npm ci
-                  npm run docs:build --
-                  --base "/pr-preview/pr-${{ github.event.number }}/"
+                  npm run docs:build -- --base "/pr-preview/pr-${{ github.event.number }}/"
 
             - name: Deploy preview
               uses: rossjrw/pr-preview-action@v1
