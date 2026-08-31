@@ -36,6 +36,6 @@ jobs:
               with:
                   source-dir: ./.vitepress/dist/
                   preview-branch: gh-pages
-                  pages-base-url: dmocnik.xyz/test-docs
+                  pages-base-url: docs.dmocnik.xyz
                   wait-for-pages-deployment: true
                   qr-code: false
