@@ -42,3 +42,5 @@ jobs:
                   pages-base-url: docs.dmocnik.xyz
                   wait-for-pages-deployment: true
                   qr-code: false
+                  git-config-name: erdferkel
+                  git-config-email: robotics@oakland.edu
